@@ -13,7 +13,7 @@
     <header>
         <div class="row">
             <div class="col-12">
-                <a href="/" title="Главная страница блога <?php bloginfo('name') ?>">
+                <a href="/" title="<?php bloginfo('name') ?>">
                     <img id="logo" src="<?= get_template_directory_uri() ?>/img/logo.png" alt="Place for your logo">
                 </a>
             </div>

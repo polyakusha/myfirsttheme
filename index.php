@@ -1,78 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <title>First, very simple theme for WordPress by polyakusha</title>
-</head>
-<body>
-    <div class="wrapper">
-
-        <!--Logo-->
-        <header>
-            <div class="row">
-                <div class="col-12">
-                    <a href="#">
-                        <img id="logo" src="img/logo.png" alt="Place for your logo">
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <!--Navigation-->
-        <nav>
-            <!--@todo: make this menu adaptive-->
-            <div class="row">
-                <div class="col-10 offset-1">
-                    <div class="top-menu">
-                        <ul class="menu">
-                            <!--@todo: реализовать вложенность в меню-->
-                            <li>One</li>
-                            <li>Two</li>
-                            <li>Three</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
+<?php get_header() ?>
         <!--Posts-->
         <div class="row">
             <div class="col-12">
+                <div class="posts">
+                    <?php while ( have_posts() ) : the_post() ?>
 
-                <div class="post-preview">
-                    <h2>First post</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consectetur consequatur debitis delectus doloribus enim esse eveniet harum impedit modi, omnis perferendis porro possimus, quas qui saepe tenetur ut veritatis?
-                    </p>
+                    <div class="post-preview">
+
+<!--                        Post title-->
+
+                        <h2>
+                            <a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>">
+                                <?php the_title()?>
+                            </a>
+                        </h2>
+
+<!--                        Post thumbnail-->
+
+                        <div class="post-thumbnail">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>">
+                                    <?php the_post_thumbnail('thumbnail') ?>
+                                </a>
+                            <?php endif ?>
+                        </div>
+
+<!--                        Post content-->
+                        <?php the_content('Read more(place text)') ?>
+
+<!--                        --><?php //if(comments_open()) : ?>
+<!--                            <a href="--><?php //the_permalink() ?><!--" title="--><?php //the_title_attribute() ?><!--">-->
+<!--                                --><?php //comments_number('No comments', 'One comment', 'Comment (%)')?>
+<!--                            </a>-->
+<!--                        --><?php //endif ?>
+
+                    </div>
+                    <?php endwhile ?>
                 </div>
 
-                <div class="post-preview">
-                    <h2>Second post</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consectetur consequatur debitis delectus doloribus enim esse eveniet harum impedit modi, omnis perferendis porro possimus, quas qui saepe tenetur ut veritatis?
-                    </p>
-                </div>
+<!--                @todo: pagination-->
 
-                <div class="post-preview">
-                    <h2>Third post</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consectetur consequatur debitis delectus doloribus enim esse eveniet harum impedit modi, omnis perferendis porro possimus, quas qui saepe tenetur ut veritatis?
-                    </p>
-                </div>
             </div>
         </div>
 
-        <!--Footer-->
-        <div class="row">
-            <div class="col-12">
-                <div class="footer">
-                    <p>Credits</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</body>
-</html>
+<?php get_footer() ?>
