@@ -3,7 +3,7 @@
 
     <!--Posts-->
     <div class="row">
-        <div class="col-12">
+        <div class="twelve columns">
             <div class="post">
 
                 <!--                Post title-->

@@ -1,0 +1,43 @@
+nav {
+    list-style: none;
+}
+
+nav li {
+    display: block;
+    text-align: center;
+}
+
+nav ul {
+    display: none;
+}
+
+
+@media (min-width: 550px) {
+    nav li {
+        display: inline-block;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    .menu-trigger {
+        text-align: center;
+        display: none;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    .sub-menu {
+        display: none;
+    }
+
+    .sub-menu li {
+        display: block;
+        position: relative;
+    }
+}
+
+

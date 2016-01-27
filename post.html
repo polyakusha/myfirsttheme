@@ -3,28 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="libs/css/normalize.css">
+    <link rel="stylesheet" href="libs/css/skeleton.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="libs/css/menu.css">
     <title>First, very simple theme for WordPress by polyakusha</title>
 </head>
+<script type="text/javascript" src="libs/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="libs/js/menu.js"></script>
 <body>
-    <div class="wrapper">
+<div class="container">
 
-        <!--Logo-->
-        <header>
-            <div class="row">
-                <div class="col-12">
-                    <a href="#">
-                        <img id="logo" src="img/logo.png" alt="Place for your logo">
-                    </a>
-                </div>
+    <!--Logo-->
+    <header>
+        <div class="row">
+            <div class="twelve columns">
+                <a href="#">
+                    <img id="logo" src="img/logo.png" alt="Place for your logo">
+                </a>
             </div>
-        </header>
+        </div>
+    </header>
 
         <!--Navigation-->
+    <a href="#" class="menu-trigger">menu</a>
         <nav>
             <!--@todo: make this menu adaptive-->
             <div class="row">
-                <div class="col-10 offset-1">
+                <div class="ten columns offset-by-one">
                     <div class="top-menu">
                         <ul class="menu">
                             <!--@todo: реализовать вложенность в меню-->
@@ -39,7 +45,7 @@
 
         <!--Posts-->
         <div class="row">
-            <div class="col-12">
+            <div class="twelve columns">
                 <div class="posts">
                     <h1>Main post</h1>
                     <p>
@@ -57,7 +63,7 @@
 
         <!--Footer-->
         <div class="row">
-            <div class="col-12">
+            <div class="twelve columns">
                 <div class="footer">
                     <p>Credits</p>
                 </div>
