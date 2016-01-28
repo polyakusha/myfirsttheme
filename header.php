@@ -29,9 +29,10 @@
             <div class="ten columns offset-by-one">
                 <?php wp_nav_menu([
                     'container' => 'div',
-                    'container_class' => 'top-menu',
+                    'container_class' => 'main-menu',
                     'menu_class' => 'menu',
                     'theme_location' => 'main_menu',
+                    'walker' => new Nav_Wrap(),
                 ]) ?>
             </div>
         </div>
