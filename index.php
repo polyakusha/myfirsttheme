@@ -39,6 +39,7 @@
                 </div>
 
 <!--                @todo: pagination-->
+                <?php pagination() ?>
 
             </div>
         </div>

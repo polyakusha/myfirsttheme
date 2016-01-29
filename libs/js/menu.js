@@ -13,4 +13,6 @@ $(document).ready(function() {
             $('nav ul').removeAttr('style');
         }
     })
+
+    var li = $('#id').children().length;
 });

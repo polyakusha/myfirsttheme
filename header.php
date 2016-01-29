@@ -32,7 +32,7 @@
                     'container_class' => 'main-menu',
                     'menu_class' => 'menu',
                     'theme_location' => 'main_menu',
-                    'walker' => new Nav_Wrap(),
+//                    'walker' => new Nav_Wrap(),
                 ]) ?>
             </div>
         </div>

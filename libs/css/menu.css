@@ -40,15 +40,19 @@ nav a:hover {
     nav li {
         display: inline-block;
         vertical-align: top;
+        position: relative;
     }
 
     li ul {
-        display: none;
+        visibility: hidden;
         transition: opacity 1s ease-out;
         opacity: 0;
+        width: inherit;
+        position: absolute;
     }
 
     li:hover ul {
+        visibility: visible;
         opacity: 1;
         display: block;
     }
